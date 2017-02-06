@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IPCImagePickerController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOC-Rz-zf5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkc-NY-Gar">
+                                <rect key="frame" x="148.5" y="323" width="77.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lc-lL-85l">
+                                <rect key="frame" x="305" y="597" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.54731673570645512" green="0.54993547606868698" blue="0.54469799534422336" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3xP-hN-DzO"/>
+                                    <constraint firstAttribute="height" constant="50" id="umD-6k-EfL"/>
+                                </constraints>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-Ot-qhV">
+                                <rect key="frame" x="20" y="597" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.54731673569999995" green="0.54993547610000004" blue="0.54469799529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="SCt-xV-QDH"/>
+                                    <constraint firstAttribute="height" constant="50" id="krw-6h-aHA"/>
+                                </constraints>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pkc-NY-Gar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1yE-La-gVT"/>
+                            <constraint firstItem="XOC-Rz-zf5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fvv-pc-G5d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fUS-Ot-qhV" secondAttribute="bottom" constant="20" id="JoK-mB-4dX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3lc-lL-85l" secondAttribute="bottom" constant="20" id="VBe-LO-Teo"/>
+                            <constraint firstAttribute="trailing" secondItem="3lc-lL-85l" secondAttribute="trailing" constant="20" id="Z0k-X0-QKF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XOC-Rz-zf5" secondAttribute="bottom" id="a8C-eM-bUA"/>
+                            <constraint firstItem="fUS-Ot-qhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="eO4-AK-qcz"/>
+                            <constraint firstItem="Pkc-NY-Gar" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h1h-2U-wI8"/>
+                            <constraint firstAttribute="trailing" secondItem="XOC-Rz-zf5" secondAttribute="trailing" id="vjj-ys-VBi"/>
+                            <constraint firstItem="XOC-Rz-zf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xbX-RX-NVY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="fUS-Ot-qhV" id="690-pd-VV1"/>
+                        <outlet property="imageView" destination="XOC-Rz-zf5" id="1az-63-cXc"/>
+                        <outlet property="noImageLabel" destination="Pkc-NY-Gar" id="oSY-kL-tCI"/>
+                        <outlet property="selectButton" destination="3lc-lL-85l" id="fVv-cB-Xvu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="15"/>
+        </scene>
+    </scenes>
+</document>

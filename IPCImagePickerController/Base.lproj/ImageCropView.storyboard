@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="j9E-Fl-QOp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Crop View Controller-->
+        <scene sceneID="cko-ci-UWw">
+            <objects>
+                <viewController storyboardIdentifier="ImageCropViewController" id="j9E-Fl-QOp" customClass="ImageCropViewController" customModule="IPCImagePickerController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pf8-u5-dsE"/>
+                        <viewControllerLayoutGuide type="bottom" id="vP3-I3-6Ie"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U45-rL-F8E" customClass="DeliveringTouchView" customModule="IPCImagePickerController" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="hS8-sF-M1p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-hX-wN4">
+                                <rect key="frame" x="0.0" y="595" width="375" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hs-RN-5Ip">
+                                        <rect key="frame" x="16" y="14" width="56" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="dc7-h5-Ehu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonDidTapWithSender:" destination="j9E-Fl-QOp" eventType="touchUpInside" id="EZJ-WK-rSV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K50-Sq-hLQ">
+                                        <rect key="frame" x="297" y="14" width="62" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="KTV-cU-CwR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Choose">
+                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chooseButtonDidTapWithSender:" destination="j9E-Fl-QOp" eventType="touchUpInside" id="sBT-6r-KSF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="50C-t1-JuS"/>
+                                    <constraint firstItem="5hs-RN-5Ip" firstAttribute="centerY" secondItem="lKh-hX-wN4" secondAttribute="centerY" id="UMU-cp-e0u"/>
+                                    <constraint firstItem="5hs-RN-5Ip" firstAttribute="leading" secondItem="lKh-hX-wN4" secondAttribute="leading" constant="16" id="f2y-sQ-HUR"/>
+                                    <constraint firstItem="K50-Sq-hLQ" firstAttribute="centerY" secondItem="lKh-hX-wN4" secondAttribute="centerY" id="i9M-b3-Ie4"/>
+                                    <constraint firstAttribute="trailing" secondItem="K50-Sq-hLQ" secondAttribute="trailing" constant="16" id="kTT-hk-xRt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hS8-sF-M1p" secondAttribute="trailing" id="AgO-8F-Uq9"/>
+                            <constraint firstItem="lKh-hX-wN4" firstAttribute="width" secondItem="U45-rL-F8E" secondAttribute="width" id="C3L-pT-Rhx"/>
+                            <constraint firstItem="vP3-I3-6Ie" firstAttribute="top" secondItem="lKh-hX-wN4" secondAttribute="bottom" id="LkC-r6-wPh"/>
+                            <constraint firstItem="hS8-sF-M1p" firstAttribute="top" secondItem="U45-rL-F8E" secondAttribute="top" id="Swb-Kj-aZ4"/>
+                            <constraint firstItem="lKh-hX-wN4" firstAttribute="centerX" secondItem="U45-rL-F8E" secondAttribute="centerX" id="ivs-8H-Y1x"/>
+                            <constraint firstItem="hS8-sF-M1p" firstAttribute="leading" secondItem="U45-rL-F8E" secondAttribute="leading" id="s96-8E-ZAH"/>
+                            <constraint firstItem="vP3-I3-6Ie" firstAttribute="top" secondItem="hS8-sF-M1p" secondAttribute="bottom" id="sLT-3o-eot"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="targetView" destination="hS8-sF-M1p" id="RH2-Ti-3WA"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="hS8-sF-M1p" id="ehj-XB-rNQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s36-ub-TrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511.19999999999999" y="-11.244377811094454"/>
+        </scene>
+    </scenes>
+</document>
